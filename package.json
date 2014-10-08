@@ -5,7 +5,7 @@
   "homepage": "https://github.com/kojiwakayama/browserify-example",
   "bugs": "https://github.com/kojiwakayama/browserify-example/issues",
   "license": "MIT",
-  "main": "lib/browserify-example.js",
+  "main": "./index.js",
   "author": {
     "name": "Koji Wakayama",
     "email": "github@kojiwakayama.com"

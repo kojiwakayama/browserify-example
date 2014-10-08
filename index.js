@@ -8,6 +8,6 @@
 
 'use strict';
 
-var browserifyExample = require('../');
+var browserifyExample = require('./lib/browserify-example');
 
 console.log(browserifyExample()); // "awesome"

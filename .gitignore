@@ -4,4 +4,4 @@ coverage/
 npm-debug.log
 .DS_Store
 .idea
-example/bundle.js
+bundle.js
