@@ -28,7 +28,11 @@ gulp.task('unitTest', function () {
 gulp.task('browserify', function() {
   'use strict';
 
-  return browserify('./example/index.js', { debug: true })
+  return browserify('./example/index.coffee', {
+      extensions: ['.coffee'],
+      debug: true
+    })
+    .transform('coffeeify')
     .bundle()
     .pipe(source('bundle.js'))
     .pipe(gulp.dest('./example/'));
