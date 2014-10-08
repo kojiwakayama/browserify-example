@@ -1,0 +1,35 @@
+{
+  "name": "browserify-example",
+  "description": "A browserify example.",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kojiwakayama/browserify-example",
+  "bugs": "https://github.com/kojiwakayama/browserify-example/issues",
+  "license": "MIT",
+  "main": "lib/browserify-example.js",
+  "author": {
+    "name": "Koji Wakayama",
+    "email": "github@kojiwakayama.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kojiwakayama/browserify-example"
+  },
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^6.0.3",
+    "coveralls": "^2.10.0",
+    "gulp": "^3.6.2",
+    "gulp-jshint": "^1.5.5",
+    "gulp-load-plugins": "^0.5.1",
+    "gulp-mocha": "^0.4.1",
+    "gulp-plumber": "^0.6.2",
+    "jshint-stylish": "^0.2.0",
+    "should": "^3.3.1",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "scripts": {
+    "coveralls": "gulp test && cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test": "gulp test"
+  }
+}
