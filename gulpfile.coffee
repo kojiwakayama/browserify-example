@@ -5,27 +5,27 @@ source = require("vinyl-source-stream")
 
 paths =
   lint: [
-    "./index.js"
-    "./gulpfile.js"
-    "./lib/**/*.js"
+    "./index.coffee"
+    "./gulpfile.coffee"
+    "./lib/**/*.coffee"
   ]
   watch: [
-    "./index.js"
-    "./gulpfile.js"
+    "./index.coffee"
+    "./gulpfile.coffee"
     "./lib/**"
-    "./test/**/*.js"
+    "./test/**/*.coffee"
     "!test/{temp,temp/**}"
   ]
   tests: [
-    "./test/**/*.js"
+    "./test/**/*.coffee"
     "!test/{temp,temp/**}"
   ]
 
 gulp.task "lint", ->
   "use strict"
   gulp.src(paths.lint)
-    .pipe(plugins.jshint(".jshintrc"))
-    .pipe(plugins.jshint.reporter("jshint-stylish"))
+    .pipe(plugins.coffeelint())
+    .pipe(plugins.coffeelint.reporter())
 
 gulp.task "unitTest", ->
   "use strict"
