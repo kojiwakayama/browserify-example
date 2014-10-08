@@ -4,8 +4,8 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 
 var paths = {
-  lint: ['./example/index.js', './gulpfile.js', './lib/**/*.js'],
-  watch: ['./example/index.js', './gulpfile.js', './lib/**', './test/**/*.js', '!test/{temp,temp/**}'],
+  lint: ['./index.js', './gulpfile.js', './lib/**/*.js'],
+  watch: ['./index.js', './gulpfile.js', './lib/**', './test/**/*.js', '!test/{temp,temp/**}'],
   tests: ['./test/**/*.js', '!test/{temp,temp/**}']
 };
 
@@ -28,14 +28,14 @@ gulp.task('unitTest', function () {
 gulp.task('browserify', function() {
   'use strict';
 
-  return browserify('./example/index.coffee', {
+  return browserify('./index.coffee', {
       extensions: ['.coffee'],
       debug: true
     })
     .transform('coffeeify')
     .bundle()
     .pipe(source('bundle.js'))
-    .pipe(gulp.dest('./example/'));
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('watch', ['test'], function () {
