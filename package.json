@@ -18,6 +18,7 @@
   "dependencies": {},
   "devDependencies": {
     "browserify": "^6.0.3",
+    "coffee-script": "^1.8.0",
     "coffeeify": "^0.7.0",
     "coveralls": "^2.10.0",
     "gulp": "^3.6.2",
