@@ -11,7 +11,6 @@ var paths = {
 
 gulp.task('lint', function () {
   'use strict';
-
   return gulp.src(paths.lint)
     .pipe(plugins.jshint('.jshintrc'))
     .pipe(plugins.jshint.reporter('jshint-stylish'));
@@ -19,7 +18,6 @@ gulp.task('lint', function () {
 
 gulp.task('unitTest', function () {
   'use strict';
-
   gulp.src(paths.tests, {cwd: __dirname})
     .pipe(plugins.plumber())
     .pipe(plugins.mocha({ reporter: 'list' }));
@@ -27,7 +25,6 @@ gulp.task('unitTest', function () {
 
 gulp.task('browserify', function() {
   'use strict';
-
   return browserify('./index.js', { debug: true })
     .bundle()
     .pipe(source('bundle.js'))
@@ -36,7 +33,6 @@ gulp.task('browserify', function() {
 
 gulp.task('watch', ['test'], function () {
   'use strict';
-
   gulp.watch(paths.watch, ['test']);
 });
 
